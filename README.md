@@ -2,11 +2,10 @@
 Print color- and stylized text in Python3.
 
 ## Usage
-
 After importing the module, instantiate the `fancyPrint` class with options.
 Calling the module from the command line gives a small demo on the usage.
 
-## Class Interface
+### Class Interface
 ```
 Class init:
   myprint = fancyPrint( fg='colorname',
@@ -19,8 +18,7 @@ Class usage:
   myprint._str('Text')                 : format 'Text' without printing it
 ```
 
-## Class Demo
-
+### Class Demo
 ``` shell
 >> ./print-fancy.py
 *****************************************************
@@ -59,3 +57,9 @@ Available text styles are
 Happy printing!
 ```
 
+## Sources
+The class definition is inspired from
+[https://www.geeksforgeeks.org/print-colors-python-terminal/](https://www.geeksforgeeks.org/print-colors-python-terminal/)
+
+The 4-Bit color codes are taken from
+[https://en.wikipedia.org/wiki/ANSI_escape_code#Colors](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
