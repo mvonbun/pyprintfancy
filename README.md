@@ -9,7 +9,14 @@ git pull https://github.com/mvonbun/pyprintfancy.git
 cd pyprintfancy
 python3 -m pip install --user printfancy-mvonbun
 ```
+or
 
+``` shell
+git pull https://github.com/mvonbun/pyprintfancy.git
+cd pyprintfancy
+python3 -m pip install --user --upgrade setuptools wheel
+python3 setup.py sdist bdist_wheel
+```
 
 ## Usage
 
