@@ -1,24 +1,34 @@
-# python-print-fancy
+# PYPRINTFANCY
 Print color- and stylized text in Python3.
 
+## Installation
+From your local copy
+
+``` shell
+git pull https://github.com/mvonbun/pyprintfancy.git
+cd pyprintfancy
+python3 -m pip install --user printfancy-mvonbun
+```
+
+
 ## Usage
-After importing the module, instantiate the `fancyPrint` class with options.
-Calling the module from the command line gives a small demo on the usage.
 
-### Class Interface
-```
-Class init:
-  myprint = fancyPrint( fg='colorname',
-                         bg='colorname',
-                         style='style' | ['list', 'of', 'styles'],
-                         end='print-end' )
-Class usage:
-  myprint.pr('Text')                   : print formatted 'Text'
-  myprint.avail('fg' | 'bg' | 'style') : list available colors/styles
-  myprint._str('Text')                 : format 'Text' without printing it
+After importing the module, instantiate the `fancyPrint` class with options.  An
+example from `ipython3`:
+
+``` python
+In [1]: import pyprintfancy.printFancy as prfancy
+
+In [2]: myprint = prfancy.fancyPrint(fg='orange', bg='purple', style=['bold', 'underline'])
+
+In [3]: myprint.pr('yay')
+yay
+
 ```
 
-### Class Demo
+
+Calling the module from the command line gives a small demo on the **usage**
+
 ``` shell
 >> ./print-fancy.py
 *****************************************************
@@ -56,6 +66,22 @@ Available text styles are
 >> myprint.pr('Happy printing!')
 Happy printing!
 ```
+
+
+## Class Interface
+```
+Class init:
+  myprint = prfancy.fancyPrint( 
+	  fg='colorname',
+      bg='colorname',
+      style='style' | ['list', 'of', 'styles'],
+      end='print-end' )
+Class usage:
+  myprint.pr('Text')                   : print formatted 'Text'
+  myprint.avail('fg' | 'bg' | 'style') : list available colors/styles
+  myprint._str('Text')                 : format 'Text' without printing it
+```
+
 
 ## Sources
 The class definition is inspired from
