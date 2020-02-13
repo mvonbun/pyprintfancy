@@ -19,13 +19,13 @@
 ##########################################################################
 
 
-class fancyPrint:
+class printFancy:
     """Basic colorized print function using ANSI codes.
 
     All parameters are optional.
 
     Class init:
-      myprint = fancyPrint( fg='colorname',
+      myprint = printFancy( fg='colorname',
                             bg='colorname',
                             style='style' | ['list', 'of', 'styles'],
                             end='print-end' )
@@ -132,7 +132,7 @@ class fancyPrint:
     # unified warning message
     def _warning(self, arg, first, second, last):
         print('Warning: No {} "{}".'.format(first, arg))
-        print('See fancyPrint.avail("{}") for available {}.'.format(second, last))
+        print('See printFancy.avail("{}") for available {}.'.format(second, last))
 
     # low level string formatter
     def _str(self, text):
@@ -182,21 +182,21 @@ class fancyPrint:
 # demo
 if __name__ == '__main__':
     print('*****************************************************')
-    print('**           print-fancy.fancyPrint Demo           **')
+    print('**                Print Fancy Demo                 **')
     print('*****************************************************')
 
-    bold_pr = fancyPrint(style='bold')
-    underline_pr = fancyPrint(style='underline')
-    orange_pr = fancyPrint(fg='orange')
-    purple_pr = fancyPrint(bg='purple')
+    bold_pr = printFancy(style='bold')
+    underline_pr = printFancy(style='underline')
+    orange_pr = printFancy(fg='orange')
+    purple_pr = printFancy(bg='purple')
     print('** In this demo, we want to use the class to print **\n** {} {} {} text on {} ground.   **'.format(
         bold_pr._str('bold'), underline_pr._str('underlined'), orange_pr._str('orange'), purple_pr._str('purple')))
     print('*****************************************************')
     print('')
 
     print('** First we try to set a foreground color that is, well nonsense:')
-    print(">> myprint = fancyPrint(fg='nonsense')")
-    myprint = fancyPrint(fg='nonsense')
+    print(">> myprint = printFancy(fg='nonsense')")
+    myprint = printFancy(fg='nonsense')
     print('')
 
     print('** Next, we check the list of available color names and styles:')
@@ -210,8 +210,8 @@ if __name__ == '__main__':
 
     print('** Finally, time to do it all right:')
     print(
-        ">> myprint=fancyPrint(fg='orange', bg='purple', style=['bold', 'underline'])")
-    myprint = fancyPrint(fg='orange', bg='purple', style=['bold', 'underline'])
+        ">> myprint=printFancy(fg='orange', bg='purple', style=['bold', 'underline'])")
+    myprint = printFancy(fg='orange', bg='purple', style=['bold', 'underline'])
     print(">> myprint.pr('Happy printing!')")
     myprint.pr('Happy printing!')
 
